@@ -2,7 +2,9 @@
   <div class="cover">
     <div class="cover-inner">
       <div class="cover-contents">
-        <a href="" class="btn btn-success btn-lg">番組検索を始める</a>
+          <% unless logged_in? %>
+            <%= link_to '番組検索を始める', signup_path, class: 'btn btn-success btn-lg' %>
+          <% end %>
       </div>
     </div>
   </div>
