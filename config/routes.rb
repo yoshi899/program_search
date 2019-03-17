@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new'
   resources :users, only: [:show, :new, :create]
+  
+  resources :programs, only: [:new]
+  get 'programs/:program_id', to: 'programs#show', as: 'program'
 end
